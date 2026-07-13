@@ -26,9 +26,9 @@
     --plum-900:#4a1330; --plum-800:#6b1c46; --plum-700:#8f2a5e;
     --gold:#c9a227; --gold-soft:#e6c667; --gold-pale:#fbf3df;
     --crimson:#e8579a; --crimson-deep:#b52d72; --crimson-pale:#fdedf4;
-    --green:#1e8f6f; --green-pale:#e5f5ef;
-    --warn:#b9822c; --warn-pale:#f5ead6;
-    --ink:#1b1a2e; --ink-soft:#4a4859; --muted:#867f92;
+    --green:#157a61; --green-pale:#e5f5ef;
+    --warn:#8a6017; --warn-pale:#f5ead6;
+    --ink:#1b1a2e; --ink-soft:#4a4859; --muted:#686476;
     --bg:#fdf8fa; --paper:#ffffff; --line:#f1e2ea;
     --shadow: 0 1px 2px rgba(74,19,48,0.04), 0 10px 28px rgba(74,19,48,0.07);
   }
@@ -79,7 +79,7 @@
   .chips{display:flex; gap:6px; flex-wrap:wrap;}
   .chip{font-size:12.5px; padding:7px 13px; border-radius:999px; border:1.5px solid var(--line); background:var(--paper); cursor:pointer; color:var(--ink-soft); font-weight:600; transition:all .12s; white-space:nowrap;}
   .chip:hover{border-color:var(--crimson);}
-  .chip.active{background:var(--crimson); border-color:var(--crimson); color:white;}
+  .chip.active{background:var(--crimson-deep); border-color:var(--crimson-deep); color:white;}
   .sortbtn{font-size:12.5px; padding:9px 12px; border-radius:10px; border:1.5px solid var(--line); background:var(--paper); cursor:pointer; color:var(--ink-soft); font-weight:600;}
 
   .wrap{max-width:1080px; margin:0 auto; padding:26px 24px 80px 24px;}
@@ -95,7 +95,7 @@
   .card .name .meta{font-size:11.5px; color:var(--muted); margin-top:3px; display:flex; gap:7px; flex-wrap:wrap; align-items:center;}
   .tag{font-size:10.5px; font-weight:700; padding:2px 7px; border-radius:5px; letter-spacing:.02em;}
   .tag.new{background:var(--gold-pale); color:#8a6a13;}
-  .tag.quota-up{background:var(--crimson-pale); color:var(--crimson);}
+  .tag.quota-up{background:var(--crimson-pale); color:var(--crimson-deep);}
   .tag.quota-down{background:var(--green-pale); color:var(--green);}
 
   .scores{display:flex; gap:20px; flex-shrink:0;}
@@ -114,7 +114,7 @@
   .panel{background:var(--paper); width:100%; max-width:560px; border-radius:20px 20px 0 0; padding:28px 26px 34px 26px; max-height:88vh; overflow-y:auto; animation:slideup .22s ease-out; position:relative;}
   @media(min-width:720px){ .panel{border-radius:20px; margin-bottom:0;} }
   @keyframes slideup{from{transform:translateY(24px); opacity:0;} to{transform:translateY(0); opacity:1;}}
-  .panel .pcode{font-family:'JetBrains Mono'; color:var(--crimson); font-weight:700; font-size:13px;}
+  .panel .pcode{font-family:'JetBrains Mono'; color:var(--crimson-deep); font-weight:700; font-size:13px;}
   .panel h2{font-family:'Archivo'; font-weight:800; font-size:20px; margin:6px 0 18px 0; line-height:1.25;}
   .panel .row{display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-top:1px solid var(--line);}
   .panel .row .k{font-size:13px; color:var(--muted);}
@@ -123,7 +123,7 @@
   .closeX{position:absolute; top:18px; right:18px; width:32px; height:32px; border-radius:50%; background:var(--bg); border:none; cursor:pointer; font-size:16px; color:var(--muted);}
 
   .foot{max-width:1080px; margin:0 auto; padding:0 24px 60px 24px; font-size:12.5px; color:var(--muted); line-height:1.7;}
-  .foot a{color:var(--crimson); text-decoration:none;}
+  .foot a{color:var(--crimson-deep); text-decoration:none;}
   .foot .warnbox{background:var(--gold-pale); border:1px solid #e9d6a0; border-radius:12px; padding:16px 18px; color:#7a5417; font-size:13px; line-height:1.6; margin-bottom:22px;}
   .empty{text-align:center; padding:60px 20px; color:var(--muted);}
 
@@ -162,7 +162,7 @@
   .wiz-choice .ccs{font-family:'JetBrains Mono'; font-size:11.5px; color:var(--muted); margin-top:2px;}
   .wiz-toggle-row{display:flex; gap:10px;}
   .wiz-toggle{flex:1; padding:11px; border:1.5px solid var(--line); border-radius:10px; background:var(--bg); cursor:pointer; font-weight:700; font-size:13.5px; color:var(--ink-soft); text-align:center;}
-  .wiz-toggle.selected{border-color:var(--crimson); border-width:2px; background:var(--crimson-pale); color:var(--crimson);}
+  .wiz-toggle.selected{border-color:var(--crimson); border-width:2px; background:var(--crimson-pale); color:var(--crimson-deep);}
   .wiz-btn-row{display:flex; gap:12px; margin-top:22px;}
   .wiz-btn-primary, .wiz-btn-secondary{font-family:'Be Vietnam Pro'; font-weight:700; font-size:14.5px; padding:12px 24px; border-radius:10px; border:none; cursor:pointer; transition:opacity .15s;}
   .wiz-btn-primary{background:var(--crimson); color:#fff;}
@@ -214,7 +214,7 @@
 
   /* ===== STATUS BADGE: xa bờ / quá ok / cần cố gắng (dùng dưới thanh thuyền) ===== */
   .status-badge{display:inline-flex; align-items:center; gap:5px; padding:3px 10px; border-radius:999px; font-family:'JetBrains Mono'; font-size:10px; font-weight:700; letter-spacing:.02em; text-transform:uppercase;}
-  .status-xabo{background:var(--crimson-pale); color:var(--crimson);}
+  .status-xabo{background:var(--crimson-pale); color:var(--crimson-deep);}
   .status-quaok{background:var(--green-pale); color:var(--green);}
   .status-oxy{background:var(--warn-pale); color:var(--warn);}
 
@@ -276,6 +276,64 @@
   .cta-band-btn-secondary{ background:rgba(255,255,255,.08); color:#fdf3f8; font-weight:700; font-size:14px; padding:13px 26px; border-radius:999px; border:1.5px solid rgba(255,255,255,.35); cursor:pointer; transition:background .15s; font-family:'Be Vietnam Pro'; }
   .cta-band-btn-secondary:hover{ background:rgba(255,255,255,.16); }
   @media(max-width:600px){ .cta-band{ padding:32px 20px; } }
+
+  /* ===== TAB 4: PHỔ ĐIỂM 2026 (phân tích khối A00/A01) ===== */
+  .hist-grid{display:flex; flex-direction:column; gap:18px;}
+  .hist-card{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:20px 20px 18px; box-shadow:var(--shadow);}
+  .hist-card-title{font-family:'Archivo'; font-weight:800; font-size:16px; color:var(--ink);}
+  .hist-card-formula{font-size:11.5px; color:var(--muted); margin-top:3px;}
+  .hist-stats{display:flex; gap:20px; margin:14px 0 6px; flex-wrap:wrap;}
+  .hist-stat .l{font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em;}
+  .hist-stat .v{font-family:'JetBrains Mono'; font-weight:700; font-size:15px; color:var(--ink); font-variant-numeric:tabular-nums;}
+  .hist-body{display:flex; gap:18px; margin-top:6px; align-items:flex-start;}
+  .hist-chart-col{flex:1; min-width:0;}
+  .hist-chart-wrap{position:relative;}
+  .hist-svg{width:100%; height:auto; display:block; cursor:crosshair; overflow:visible;}
+  .hist-svg .grid-line{stroke:var(--line); stroke-width:1;}
+  .hist-svg .axis-text{font-family:'JetBrains Mono'; font-size:9.5px; fill:var(--muted); pointer-events:none;}
+  .hist-svg .mean-line{stroke:var(--ink-soft); stroke-width:1.3; stroke-dasharray:3,3; pointer-events:none;}
+  .hist-svg .mean-label{font-family:'JetBrains Mono'; font-size:9.5px; fill:var(--ink-soft); font-weight:700; pointer-events:none;}
+  .hist-svg .crosshair{stroke:var(--ink-soft); stroke-width:1; pointer-events:none; opacity:0;}
+  .hist-svg .hover-dot{pointer-events:none; opacity:0;}
+  .hist-tooltip{position:absolute; pointer-events:none; background:var(--plum-900); color:#fdf3f8; font-size:11.5px; padding:7px 10px; border-radius:8px; line-height:1.5; box-shadow:0 6px 18px rgba(74,19,48,.25); opacity:0; transform:translate(-50%,-100%); white-space:nowrap; z-index:5; transition:opacity .1s;}
+  .hist-tooltip b{font-family:'JetBrains Mono'; font-size:13px;}
+  .hist-table-toggle{margin-top:14px; background:transparent; border:1.5px solid var(--line); border-radius:9px; padding:8px 13px; font-size:12.5px; font-weight:700; color:var(--ink-soft); cursor:pointer; font-family:'Be Vietnam Pro';}
+  .hist-table-toggle:hover{border-color:var(--crimson); color:var(--crimson-deep);}
+  .hist-table-wrap{max-height:220px; overflow-y:auto; margin-top:10px; border:1px solid var(--line); border-radius:10px;}
+  table.hist-table{width:100%; border-collapse:collapse; font-size:12px;}
+  table.hist-table th{position:sticky; top:0; background:var(--bg); text-align:left; padding:7px 12px; font-size:10.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); border-bottom:1px solid var(--line);}
+  table.hist-table td{padding:5px 12px; border-bottom:1px solid var(--line); font-family:'JetBrains Mono'; font-variant-numeric:tabular-nums;}
+  table.hist-table tr:last-child td{border-bottom:none;}
+  /* Bảng lũy kế "số thí sinh đạt từ X điểm trở lên" — cố định bên phải biểu đồ */
+  .hist-cumtable-col{flex:0 0 232px; max-height:290px; overflow-y:auto; border:1px solid var(--line); border-radius:10px; align-self:stretch;}
+  .hist-cumtable-title{position:sticky; top:0; z-index:1; background:var(--bg); font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); padding:8px 12px; border-bottom:1px solid var(--line);}
+  table.hist-cumtable{width:100%; border-collapse:collapse; font-size:12px;}
+  table.hist-cumtable th{position:sticky; top:29px; background:var(--bg); text-align:left; padding:6px 12px; font-size:10px; text-transform:uppercase; letter-spacing:.03em; color:var(--muted); border-bottom:1px solid var(--line);}
+  table.hist-cumtable td{padding:4px 12px; border-bottom:1px solid var(--line); font-family:'JetBrains Mono'; font-variant-numeric:tabular-nums; font-size:11.5px;}
+  table.hist-cumtable tr.cum-mean td{background:var(--crimson-pale); font-weight:700;}
+  table.hist-cumtable tr:last-child td{border-bottom:none;}
+  @media(max-width:680px){
+    .hist-body{flex-direction:column;}
+    .hist-cumtable-col{flex:none; width:100%; max-height:200px;}
+  }
+  /* So sánh 2025 & 2026 */
+  .cmp-legend{display:flex; gap:16px; flex-wrap:wrap; margin:12px 0 4px;}
+  .cmp-legend-item{display:flex; align-items:center; gap:7px; font-size:12px; color:var(--ink-soft); font-weight:600;}
+  .cmp-legend-swatch{width:22px; height:0; border-top-width:3px; border-top-style:solid; display:inline-block;}
+  .cmp-legend-item.dashed .cmp-legend-swatch{border-top-style:dashed;}
+  /* Tooltip riêng cho biểu đồ so sánh 2025/2026: nền sáng + chấm màu, tránh
+     kiểu chữ màu-trên-nền-tối (một số màu đường như plum đậm gần như biến
+     mất trên nền tối của tooltip mặc định). */
+  .cmp-tooltip{background:var(--paper); border:1px solid var(--line); box-shadow:0 10px 26px rgba(74,19,48,.16); color:var(--ink); padding:9px 12px;}
+  .cmp-tooltip .cmp-tt-score{font-family:'JetBrains Mono'; font-weight:700; font-size:12.5px; color:var(--ink); margin-bottom:5px; padding-bottom:5px; border-bottom:1px solid var(--line);}
+  .cmp-tooltip .cmp-tt-row{display:flex; align-items:center; gap:7px; font-size:12px; color:var(--ink-soft); font-weight:600; white-space:nowrap; padding:1.5px 0;}
+  .cmp-tooltip .cmp-tt-dot{width:8px; height:8px; border-radius:50%; flex:none; box-shadow:0 0 0 1px rgba(27,26,46,.12);}
+  .cmp-tooltip .cmp-tt-row b{font-family:'JetBrains Mono'; font-size:12.5px; color:var(--ink); margin-left:auto; padding-left:14px;}
+  table.cmp-table{width:100%; border-collapse:collapse; font-size:12.5px; margin-top:14px;}
+  table.cmp-table th{text-align:left; padding:7px 10px; font-size:10.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); border-bottom:1px solid var(--line);}
+  table.cmp-table td{padding:6px 10px; border-bottom:1px solid var(--line); font-family:'JetBrains Mono'; font-variant-numeric:tabular-nums;}
+  table.cmp-table tr:last-child td{border-bottom:none;}
+  table.cmp-table td.cmp-khoi{font-family:'Be Vietnam Pro'; font-weight:700; color:var(--ink);}
 </style>
 </head>
 <body>
@@ -290,6 +348,7 @@
       <div class="tab active" data-page="tracuu">Dự báo điểm chuẩn</div>
       <div class="tab" data-page="doidiem">Đổi điểm</div>
       <div class="tab" data-page="nguyenvong">Đặt nguyện vọng</div>
+      <div class="tab" data-page="phodiem">Phổ điểm 2026</div>
     </div>
     <!-- TODO: đây chỉ là UI đăng nhập mô phỏng, cần backend/Firebase Auth thật
          (kèm OAuth client ID) thì các nút này mới đăng nhập được thật sự. -->
@@ -485,6 +544,97 @@
         <div id="nv-result-grid"></div>
       </div>
       <div class="disclaimer">So sánh với điểm chuẩn <strong>2025</strong> (chính thức, đã có kết quả thật) của từng ngành.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- TAB 4: PHỔ ĐIỂM 2026 (phân tích khối A00 / A01 từ dữ liệu thật) -->
+<!-- ============================================================ -->
+<div class="page" id="page-phodiem">
+  <div class="wiz-shell" style="max-width:1080px;">
+    <div class="tab-hero">
+      <div class="cta-band-eyebrow"><span class="dot"></span>PHỔ ĐIỂM THI TỐT NGHIỆP THPT 2026</div>
+      <h1>Phổ điểm khối A00 &amp; A01 — từ dữ liệu thật</h1>
+      <p>Tổng hợp từ <strong id="pd-total-rows">—</strong> lượt thi năm 2026. Trục hoành là điểm xét tuyển (thang 30), trục tung là số thí sinh đạt đúng mức điểm đó. So sánh 4 cách tính: tổng điểm thường và công thức HUST hay dùng — nhân hệ số 2 môn Toán rồi quy về thang 30 (×3/4).</p>
+    </div>
+
+    <div class="wiz-card" id="pd-rank-tool">
+      <div class="wiz-step-title" style="margin-bottom:6px; font-size:19px;">Tra cứu xếp hạng điểm của bạn</div>
+      <div class="wiz-hint" style="margin-bottom:20px;">Chọn khối, công thức tính — nhập điểm từng môn — hệ thống so sánh với toàn bộ dữ liệu thi thật 2026 để xếp hạng.</div>
+
+      <div class="wiz-field">
+        <label>Khối xét tuyển</label>
+        <div class="wiz-toggle-row" id="pd-rank-khoi">
+          <div class="wiz-toggle selected" data-khoi="a00">A00 — Toán, Lý, Hóa</div>
+          <div class="wiz-toggle" data-khoi="a01">A01 — Toán, Lý, Anh</div>
+        </div>
+      </div>
+
+      <div class="wiz-field">
+        <label>Công thức tính điểm</label>
+        <div class="wiz-toggle-row" id="pd-rank-formula">
+          <div class="wiz-toggle selected" data-formula="raw">Tổng điểm thường</div>
+          <div class="wiz-toggle" data-formula="x2">Nhân hệ số 2 môn Toán (×3/4)</div>
+        </div>
+      </div>
+
+      <div class="wiz-field">
+        <label>Nhập điểm từng môn (thang 10) — chỉ cần 3 môn khớp khối đã chọn, có thể nhập cả 4 để đổi khối qua lại</label>
+        <div class="wiz-cert-sub-row">
+          <div class="wiz-field" id="pd-rank-field-toan"><label>Toán</label><input type="number" class="wiz-input" id="pd-rank-toan" step="0.05" min="0" max="10" placeholder="0 – 10"></div>
+          <div class="wiz-field" id="pd-rank-field-ly"><label>Vật lý</label><input type="number" class="wiz-input" id="pd-rank-ly" step="0.05" min="0" max="10" placeholder="0 – 10"></div>
+        </div>
+        <div class="wiz-cert-sub-row">
+          <div class="wiz-field" id="pd-rank-field-hoa"><label>Hóa học</label><input type="number" class="wiz-input" id="pd-rank-hoa" step="0.05" min="0" max="10" placeholder="0 – 10"></div>
+          <div class="wiz-field" id="pd-rank-field-anh"><label>Tiếng Anh</label><input type="number" class="wiz-input" id="pd-rank-anh" step="0.05" min="0" max="10" placeholder="0 – 10"></div>
+        </div>
+      </div>
+
+      <div id="pd-rank-result" style="display:none;">
+        <div class="score-summary">
+          <div class="label">Điểm xét tuyển — <span id="pd-rank-label"></span></div>
+          <div class="value" id="pd-rank-score">—</div>
+          <div class="breakdown" id="pd-rank-breakdown"></div>
+        </div>
+        <div class="hist-stats" style="margin:18px 2px 4px; gap:28px;">
+          <div class="hist-stat"><div class="l">Cao hơn bạn</div><div class="v" id="pd-rank-higher"></div></div>
+          <div class="hist-stat"><div class="l">Bằng điểm (±0.125)</div><div class="v" id="pd-rank-equal"></div></div>
+          <div class="hist-stat"><div class="l">Thấp hơn bạn</div><div class="v" id="pd-rank-lower"></div></div>
+        </div>
+        <div class="wiz-warnbox" id="pd-rank-pct" style="margin-top:14px;"></div>
+      </div>
+      <div class="wiz-hint" id="pd-rank-empty" style="margin-top:8px;">Nhập đủ 3 môn phù hợp khối đã chọn để xem xếp hạng.</div>
+    </div>
+
+    <div class="hist-grid" id="pd-grid"></div>
+
+    <div class="disclaimer" style="margin-top:16px;">
+      <b>Cách đọc biểu đồ:</b> di chuột (hoặc chạm trên di động) vào đường biểu diễn để xem chính xác số thí sinh ở từng mức điểm. Đường đứt nét thẳng đứng là điểm trung bình. Bấm "Xem bảng số liệu" để xem toàn bộ dữ liệu dạng bảng.
+    </div>
+    <div class="foot" style="padding:14px 0 0;">
+      Nguồn: dữ liệu điểm thi tốt nghiệp THPT 2026 (diemthithpt_2026.csv). A00 = Toán + Lý + Hóa · A01 = Toán + Lý + Tiếng Anh (chỉ tính thí sinh thi ngoại ngữ Tiếng Anh) · Công thức hệ số HUST: (Toán×2 + Môn2 + Môn3) × 3/4, quy về thang 30.
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- SO SÁNH DỮ LIỆU NĂM 2025 & 2026 -->
+    <!-- ============================================================ -->
+    <div class="tab-hero" style="margin-top:28px;">
+      <div class="cta-band-eyebrow"><span class="dot"></span>ĐỐI CHIẾU HAI NĂM THI</div>
+      <h1>So sánh dữ liệu năm 2025 &amp; 2026</h1>
+      <p>Chọn năm muốn xem để hiện phổ điểm khối A00, A01 — có thể bấm cả hai nút để so sánh chồng hai năm trên cùng biểu đồ. Chưa chọn năm nào thì chưa hiện biểu đồ.</p>
+    </div>
+
+    <div class="wiz-card" id="cmp-tool">
+      <div class="wiz-field" style="margin-bottom:0;">
+        <label>Chọn năm hiển thị</label>
+        <div class="wiz-toggle-row" id="cmp-year-toggle">
+          <div class="wiz-toggle" data-year="2025">Năm 2025</div>
+          <div class="wiz-toggle" data-year="2026">Năm 2026</div>
+        </div>
+      </div>
+      <div class="wiz-hint" id="cmp-empty-hint" style="margin-top:10px;">Bấm "Năm 2025" và/hoặc "Năm 2026" ở trên để hiện biểu đồ so sánh.</div>
+      <div class="hist-grid" id="cmp-grid" style="display:none; margin-top:18px;"></div>
     </div>
   </div>
 </div>
@@ -883,7 +1033,7 @@ function bucketOf(d){
   if(d.nhom==='V') return 'quocte';
   return d.ma.startsWith('FL') ? 'tieng' : 'kinhte';
 }
-const CONF_COLOR = {Cao:'#1e8f6f', TB:'#c9a227', 'Thấp':'#b52d72', RT:'#b52d72'};
+const CONF_COLOR = {Cao:'#157a61', TB:'#8a6a13', 'Thấp':'#b52d72', RT:'#b52d72'};
 const CONF_PCT = {Cao:0.9, TB:0.65, 'Thấp':0.4, RT:0.25};
 
 function renderChips(){
@@ -944,7 +1094,7 @@ function openPanel(ma){
     <div class="pcode">${d.ma} · ${GROUP_LABEL[bucketOf(d)]}</div>
     <h2>${d.ten}</h2>
     <div class="row"><div class="k">Điểm chuẩn 2025</div><div class="v">${d.dc2025?d.dc2025.toFixed(2):'Không có dữ liệu'}</div></div>
-    <div class="row"><div class="k">TSA dự báo 2026 — quy đổi chính thức (xấu nhất)</div><div class="v" style="color:var(--crimson)">${d.tsa.toFixed(2)}${d.tsaExtrapolated?' *':''}</div></div>
+    <div class="row"><div class="k">TSA dự báo 2026 — quy đổi chính thức (xấu nhất)</div><div class="v" style="color:var(--crimson-deep)">${d.tsa.toFixed(2)}${d.tsaExtrapolated?' *':''}</div></div>
     <div class="row"><div class="k">THPT dự đoán 2026 — quy đổi từ TSA</div><div class="v">${thptPredicted(d).toFixed(2)}</div></div>
     <div class="row"><div class="k">Độ tin cậy</div><div class="v" style="color:${CONF_COLOR[d.tinCay]}">${d.tinCay}</div></div>
     ${d.chiTieuPct ? `<div class="row"><div class="k">Chỉ tiêu 2025 → 2026</div><div class="v">${d.chiTieu2025} → ${d.chiTieu2026}</div></div>` : ''}
@@ -1138,6 +1288,542 @@ function renderNvTable() {
   });
   grid.innerHTML = html || '<div class="empty">Không tìm thấy ngành phù hợp.</div>';
 }
+
+/* ================================================================
+   TAB 4: PHỔ ĐIỂM 2026 — phân tích khối A00 / A01 từ dữ liệu thật
+   (175.241 thí sinh đủ Toán+Lý+Hóa, 143.177 thí sinh đủ Toán+Lý+Anh,
+   gộp từ diemthithpt_2026.csv theo bước 0.25 điểm, thang 30)
+   ================================================================ */
+const PHODIEM_2026 = {"bin":0.25,"totalRows":1208863,"labels":[0,0.25,0.5,0.75,1,1.25,1.5,1.75,2,2.25,2.5,2.75,3,3.25,3.5,3.75,4,4.25,4.5,4.75,5,5.25,5.5,5.75,6,6.25,6.5,6.75,7,7.25,7.5,7.75,8,8.25,8.5,8.75,9,9.25,9.5,9.75,10,10.25,10.5,10.75,11,11.25,11.5,11.75,12,12.25,12.5,12.75,13,13.25,13.5,13.75,14,14.25,14.5,14.75,15,15.25,15.5,15.75,16,16.25,16.5,16.75,17,17.25,17.5,17.75,18,18.25,18.5,18.75,19,19.25,19.5,19.75,20,20.25,20.5,20.75,21,21.25,21.5,21.75,22,22.25,22.5,22.75,23,23.25,23.5,23.75,24,24.25,24.5,24.75,25,25.25,25.5,25.75,26,26.25,26.5,26.75,27,27.25,27.5,27.75,28,28.25,28.5,28.75,29,29.25,29.5,29.75,30],"hist":{"a00":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,2,2,10,11,11,19,19,29,47,62,78,103,127,136,205,241,264,341,438,508,576,710,788,918,1052,1053,1273,1408,1542,1546,1699,1776,1952,2081,2204,2227,2379,2331,2521,2526,2611,2662,2728,2775,2875,2825,2998,3037,3030,3169,3063,3262,3206,3242,3300,3263,3327,3443,3523,3465,3338,3492,3625,3703,3551,3652,3733,3618,3697,3713,3592,3415,3492,3280,3168,3065,2726,2653,2480,2234,1973,1717,1499,1283,1090,944,800,632,518,412,333,266,193,135,75,67,38,16,1],"a01":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,4,2,4,7,7,17,16,19,38,48,69,92,121,169,218,261,387,454,565,653,777,913,1069,1183,1304,1451,1581,1756,1797,1925,2073,2088,2227,2340,2390,2546,2539,2649,2691,2798,2706,2869,2931,2984,2953,2952,3136,3111,3058,3165,3045,3156,3069,3050,2994,3103,3051,2992,2977,2807,2853,2740,2756,2697,2580,2538,2384,2221,2159,1952,2049,1826,1725,1486,1452,1335,1140,975,873,764,637,577,493,412,304,249,207,126,101,88,55,33,16,9,4,3,0],"a00x2":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,3,2,1,5,9,3,19,14,10,34,37,46,62,66,89,91,158,157,204,191,267,326,408,430,541,650,676,813,964,976,1153,1334,1350,1456,1673,1642,1884,1999,1960,2145,2367,2047,2422,2470,2231,2694,2710,2278,2966,2913,2536,3261,3112,2562,3543,3153,2739,3751,3407,2797,4144,3428,2864,4508,3506,2936,4778,3666,2994,4991,3681,2867,5180,3576,2941,5113,3326,2624,4595,2637,2222,3858,2026,1715,2690,1372,1058,1736,756,621,1006,388,331,537,218,156,226,53,55,53,1],"a01x2":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2,3,2,5,6,8,8,10,18,17,30,41,50,77,88,127,159,167,210,255,311,480,498,534,758,858,774,1173,1191,1087,1600,1511,1375,1978,1872,1557,2331,2040,1729,2695,2341,1910,3114,2468,2126,3360,2630,2127,3796,2765,2436,4008,2861,2587,4353,2859,2505,4400,2897,2476,4524,2855,2465,4551,2570,2402,4361,2508,2119,4063,2138,1906,3460,1819,1533,2831,1381,1177,2094,954,813,1391,581,536,766,286,314,429,182,125,182,62,60,56,14,8,6,0]},"stats":{"a00":{"count":175241,"sum":3401110.7000037474,"max":30,"mean":19.41},"a01":{"count":143177,"sum":2636433.500001679,"max":29.75,"mean":18.41},"a00x2":{"count":175241,"sum":3499384.1499982676,"max":30,"mean":19.97},"a01x2":{"count":143177,"sum":2761649.6199981747,"max":29.81,"mean":19.29}}};
+
+/* Phổ điểm 2025 (khối A00/A01), gộp từ 20250715-ketquathi-ct2018a.csv +
+   20250715-ketquathi-ct2006.csv, cùng bước 0.25 điểm / thang 30 với dữ liệu 2026
+   để có thể chồng biểu đồ so sánh trực tiếp hai năm. */
+const PHODIEM_2025 = {"bin":0.25,"totalRows":1153226,"labels":[0,0.25,0.5,0.75,1,1.25,1.5,1.75,2,2.25,2.5,2.75,3,3.25,3.5,3.75,4,4.25,4.5,4.75,5,5.25,5.5,5.75,6,6.25,6.5,6.75,7,7.25,7.5,7.75,8,8.25,8.5,8.75,9,9.25,9.5,9.75,10,10.25,10.5,10.75,11,11.25,11.5,11.75,12,12.25,12.5,12.75,13,13.25,13.5,13.75,14,14.25,14.5,14.75,15,15.25,15.5,15.75,16,16.25,16.5,16.75,17,17.25,17.5,17.75,18,18.25,18.5,18.75,19,19.25,19.5,19.75,20,20.25,20.5,20.75,21,21.25,21.5,21.75,22,22.25,22.5,22.75,23,23.25,23.5,23.75,24,24.25,24.5,24.75,25,25.25,25.5,25.75,26,26.25,26.5,26.75,27,27.25,27.5,27.75,28,28.25,28.5,28.75,29,29.25,29.5,29.75,30],"hist":{"a00":[0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,4,2,6,9,11,27,29,30,53,69,65,95,137,165,197,265,304,383,457,545,619,680,883,933,1052,1189,1280,1496,1558,1751,1893,1969,2163,2225,2406,2509,2617,2747,2857,2912,2924,3179,3062,3167,3334,3347,3359,3385,3378,3332,3354,3223,3327,3438,3304,3283,3217,3121,3244,3092,3039,2975,2952,2901,2887,2784,2691,2637,2572,2460,2397,2375,2300,2300,2152,2064,2017,1984,1891,1711,1631,1558,1526,1430,1214,1177,1016,843,698,583,410,282,161,93,58,24,8],"a01":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,4,3,1,5,7,11,18,15,31,46,53,47,73,99,122,181,220,246,320,371,466,557,612,728,853,960,1146,1235,1455,1591,1652,1897,1951,2207,2332,2560,2636,2799,3019,3031,3062,3313,3385,3462,3649,3707,3768,3746,3822,3768,3764,3830,3728,3647,3658,3664,3490,3388,3239,3231,3146,2898,2901,2780,2696,2604,2379,2280,2084,2042,1897,1781,1660,1458,1443,1198,984,941,826,700,586,496,419,327,262,175,141,97,66,45,21,17,5,7,1,0],"a00x2":[0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,2,2,4,8,8,19,22,29,33,37,70,71,93,133,173,165,230,278,325,396,560,541,692,754,830,1027,1176,1163,1415,1536,1543,1938,2061,1919,2437,2326,2279,2750,2792,2668,3134,2913,2978,3473,3198,3045,3745,3306,3144,3984,3273,3107,4047,3231,2990,4014,2993,2877,4006,2897,2693,3895,2672,2397,3823,2405,2206,3679,2213,1918,3401,1934,1835,3150,1762,1671,2960,1586,1454,2638,1344,1224,2340,1112,1081,1988,843,777,1312,511,479,627,185,137,206,55,26,57,8],"a01x2":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,2,7,5,5,14,13,15,30,34,39,55,69,115,123,139,187,247,294,300,440,468,507,726,709,830,1163,1066,1207,1603,1572,1638,2160,1915,2041,2798,2312,2554,3386,2623,2823,3987,2866,3113,4337,3107,3292,4723,3307,3313,4848,3087,3144,4828,2986,3050,4603,2643,2652,4401,2513,2317,3988,2215,2075,3557,1940,1773,3159,1661,1512,2876,1352,1271,2318,1071,1031,1677,794,711,1173,489,408,692,252,212,296,97,93,108,32,21,20,10,4,4,0]},"stats":{"a00":{"count":165467,"sum":3207473.150003237,"max":30,"mean":19.38},"a01":{"count":148246,"sum":2798163.800002076,"max":29.75,"mean":18.88},"a00x2":{"count":165467,"sum":3165025.539998311,"max":30,"mean":19.13},"a01x2":{"count":148246,"sum":2786562.0899979956,"max":29.81,"mean":18.8}}};
+
+const HIST_CHARTS = [
+  { key:'a00',   title:'A00 — Toán, Lý, Hóa',            formula:'Điểm = Toán + Lý + Hóa',                color:'#b52d72', fill:'rgba(181,45,114,0.14)' },
+  { key:'a00x2', title:'A00 — Toán hệ số 2 (thang 30)',  formula:'Điểm = (Toán×2 + Lý + Hóa) × 3/4',      color:'#e8579a', fill:'rgba(232,87,154,0.14)' },
+  { key:'a01',   title:'A01 — Toán, Lý, Anh',             formula:'Điểm = Toán + Lý + Tiếng Anh',          color:'#6b1c46', fill:'rgba(107,28,70,0.14)' },
+  { key:'a01x2', title:'A01 — Toán hệ số 2 (thang 30)',  formula:'Điểm = (Toán×2 + Lý + Anh) × 3/4',      color:'#8f2a5e', fill:'rgba(143,42,94,0.14)' },
+];
+
+function fmtInt(n) { return Math.round(n).toLocaleString('vi-VN'); }
+
+function buildHistCard(cfg) {
+  const { key, title, formula, color, fill } = cfg;
+  const labels = PHODIEM_2026.labels;
+  const counts = PHODIEM_2026.hist[key];
+  const stats = PHODIEM_2026.stats[key];
+  const maxCount = Math.max(...counts);
+  // Công thức x2/x3-4 có bước điểm lẻ (0.0375) không chia hết cho bước cột 0.25,
+  // gây răng cưa khi vẽ — làm mượt nhẹ đường vẽ bằng kernel Gauss (độ lệch chuẩn
+  // σ = 0.1 điểm) để dễ đọc, trong khi tooltip/bảng vẫn hiển thị đúng số liệu gốc
+  // theo từng cột.
+  const SIGMA_POINTS = 0.1;
+  const sigmaBins = SIGMA_POINTS / PHODIEM_2026.bin;
+  const kernelRadius = Math.max(1, Math.ceil(sigmaBins * 3));
+  const kernel = [];
+  for (let k = -kernelRadius; k <= kernelRadius; k++) kernel.push(Math.exp(-(k * k) / (2 * sigmaBins * sigmaBins)));
+  const smoothed = counts.map((_, i) => {
+    let sum = 0, wsum = 0;
+    for (let k = -kernelRadius; k <= kernelRadius; k++) {
+      const j = i + k;
+      if (j >= 0 && j < counts.length) { const w = kernel[k + kernelRadius]; sum += counts[j] * w; wsum += w; }
+    }
+    return sum / wsum;
+  });
+
+  const card = document.createElement('div');
+  card.className = 'hist-card';
+  card.innerHTML = `
+    <div class="hist-card-title"></div>
+    <div class="hist-card-formula mono"></div>
+    <div class="hist-stats">
+      <div class="hist-stat"><div class="l">Thí sinh</div><div class="v">${fmtInt(stats.count)}</div></div>
+      <div class="hist-stat"><div class="l">% tổng số thi</div><div class="v">${(stats.count / PHODIEM_2026.totalRows * 100).toFixed(1)}%</div></div>
+      <div class="hist-stat"><div class="l">Điểm TB</div><div class="v">${stats.mean.toFixed(2)}</div></div>
+      <div class="hist-stat"><div class="l">Cao nhất</div><div class="v">${stats.max.toFixed(2)}</div></div>
+    </div>
+    <div class="hist-body">
+      <div class="hist-chart-col">
+        <div class="hist-chart-wrap">
+          <svg class="hist-svg" viewBox="0 0 640 260" preserveAspectRatio="none"></svg>
+          <div class="hist-tooltip"></div>
+        </div>
+        <button class="hist-table-toggle" type="button">Xem bảng số liệu ▾</button>
+        <div class="hist-table-wrap" style="display:none;"></div>
+      </div>
+      <div class="hist-cumtable-col">
+        <div class="hist-cumtable-title">Thí sinh đạt ≥ điểm</div>
+        <table class="hist-cumtable">
+          <thead><tr><th>Điểm</th><th>Số TS</th><th>% khối</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  `;
+  card.querySelector('.hist-card-title').textContent = title;
+  card.querySelector('.hist-card-formula').textContent = formula;
+
+  // Bảng lũy kế "≥ điểm": số thí sinh đạt từ mỗi mốc điểm trở lên (bước 0.5),
+  // kèm % so với tổng thí sinh của khối này — đọc như thứ hạng "top X%".
+  (function buildCumTable() {
+    const n = labels.length;
+    const suffix = new Array(n);
+    let running = 0;
+    for (let i = n - 1; i >= 0; i--) { running += counts[i]; suffix[i] = running; }
+    const step = 0.5;
+    const stepsCount = Math.round(30 / step);
+    const tbody = card.querySelector('.hist-cumtable tbody');
+    for (let k = stepsCount; k >= 0; k--) {
+      const t = Math.round(k * step * 100) / 100;
+      const idx = Math.min(n - 1, Math.max(0, Math.round(t / PHODIEM_2026.bin)));
+      const tr = document.createElement('tr');
+      if (Math.abs(t - Math.round(stats.mean / step) * step) < step / 2) tr.className = 'cum-mean';
+      const td1 = document.createElement('td'); td1.textContent = t.toFixed(1);
+      const td2 = document.createElement('td'); td2.textContent = fmtInt(suffix[idx]);
+      const td3 = document.createElement('td'); td3.textContent = (suffix[idx] / stats.count * 100).toFixed(2) + '%';
+      tr.appendChild(td1); tr.appendChild(td2); tr.appendChild(td3);
+      tbody.appendChild(tr);
+    }
+  })();
+
+  const svg = card.querySelector('.hist-svg');
+  const tooltip = card.querySelector('.hist-tooltip');
+  const wrap = card.querySelector('.hist-chart-wrap');
+
+  const VBW = 640, VBH = 260, PAD_L = 36, PAD_R = 10, PAD_T = 16, PAD_B = 26;
+  const innerW = VBW - PAD_L - PAD_R;
+  const innerH = VBH - PAD_T - PAD_B;
+  const baseY = PAD_T + innerH;
+  const xForScore = (s) => PAD_L + (s / 30) * innerW;
+  const yForCount = (c) => PAD_T + innerH - (c / maxCount) * innerH;
+
+  const NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs) {
+    const e = document.createElementNS(NS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+
+  // gridlines: x ticks 0..30 step 5, y ticks 0 / mid / max
+  for (let s = 0; s <= 30; s += 5) {
+    const x = xForScore(s);
+    svg.appendChild(el('line', { class: 'grid-line', x1: x, x2: x, y1: PAD_T, y2: baseY }));
+    const t = el('text', { class: 'axis-text', x, y: VBH - 8, 'text-anchor': s === 0 ? 'start' : (s === 30 ? 'end' : 'middle') });
+    t.textContent = s;
+    svg.appendChild(t);
+  }
+  [0, Math.round(maxCount / 2), maxCount].forEach((v) => {
+    const y = yForCount(v);
+    svg.appendChild(el('line', { class: 'grid-line', x1: PAD_L, x2: PAD_L + innerW, y1: y, y2: y }));
+    const t = el('text', { class: 'axis-text', x: PAD_L - 6, y: y + 3, 'text-anchor': 'end' });
+    t.textContent = fmtInt(v);
+    svg.appendChild(t);
+  });
+
+  // area + line (dùng dữ liệu đã làm mượt để vẽ)
+  const pts = labels.map((s, i) => `${xForScore(s)},${yForCount(smoothed[i])}`);
+  const areaD = `M${xForScore(labels[0])},${baseY} L${pts.join(' L')} L${xForScore(labels[labels.length - 1])},${baseY} Z`;
+  svg.appendChild(el('path', { d: areaD, fill, stroke: 'none' }));
+  svg.appendChild(el('polyline', { points: pts.join(' '), fill: 'none', stroke: color, 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }));
+
+  // mean marker
+  const meanX = xForScore(stats.mean);
+  svg.appendChild(el('line', { class: 'mean-line', x1: meanX, x2: meanX, y1: PAD_T, y2: baseY }));
+  const meanLabel = el('text', { class: 'mean-label', x: meanX, y: PAD_T - 4, 'text-anchor': 'middle' });
+  meanLabel.textContent = `TB ${stats.mean.toFixed(1)}`;
+  svg.appendChild(meanLabel);
+
+  // hover crosshair + dot (drawn above data, hidden by default)
+  const crosshair = el('line', { class: 'crosshair', x1: 0, x2: 0, y1: PAD_T, y2: baseY });
+  const dot = el('circle', { class: 'hover-dot', r: 4, fill: color, stroke: '#fff', 'stroke-width': 2 });
+  svg.appendChild(crosshair);
+  svg.appendChild(dot);
+
+  // transparent hit layer on top, captures pointer/touch
+  const hitRect = el('rect', { x: PAD_L, y: PAD_T, width: innerW, height: innerH, fill: 'transparent' });
+  svg.appendChild(hitRect);
+
+  function showAt(clientX) {
+    const rect = svg.getBoundingClientRect();
+    const wrapRect = wrap.getBoundingClientRect();
+    const fracX = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+    const userX = fracX * VBW;
+    const score = Math.min(30, Math.max(0, ((userX - PAD_L) / innerW) * 30));
+    let idx = Math.round(score / PHODIEM_2026.bin);
+    idx = Math.min(labels.length - 1, Math.max(0, idx));
+    const sx = xForScore(labels[idx]), sy = yForCount(smoothed[idx]);
+    crosshair.setAttribute('x1', sx); crosshair.setAttribute('x2', sx);
+    crosshair.style.opacity = 1;
+    dot.setAttribute('cx', sx); dot.setAttribute('cy', sy);
+    dot.style.opacity = 1;
+    const leftPx = (sx / VBW) * wrapRect.width;
+    const topPx = (sy / VBH) * wrapRect.height;
+    tooltip.style.left = leftPx + 'px';
+    tooltip.style.top = Math.max(0, topPx - 10) + 'px';
+    tooltip.innerHTML = '';
+    const b = document.createElement('b'); b.textContent = labels[idx].toFixed(2);
+    tooltip.appendChild(b);
+    tooltip.appendChild(document.createTextNode(` điểm — ${fmtInt(counts[idx])} thí sinh`));
+    tooltip.style.opacity = 1;
+  }
+  function hide() { crosshair.style.opacity = 0; dot.style.opacity = 0; tooltip.style.opacity = 0; }
+
+  hitRect.addEventListener('pointermove', (e) => showAt(e.clientX));
+  hitRect.addEventListener('pointerleave', hide);
+  hitRect.addEventListener('touchstart', (e) => { if (e.touches[0]) showAt(e.touches[0].clientX); }, { passive: true });
+  hitRect.addEventListener('touchmove', (e) => { if (e.touches[0]) showAt(e.touches[0].clientX); }, { passive: true });
+
+  // table view (built lazily on first open)
+  const tableToggle = card.querySelector('.hist-table-toggle');
+  const tableWrap = card.querySelector('.hist-table-wrap');
+  let built = false;
+  tableToggle.addEventListener('click', () => {
+    const isOpen = tableWrap.style.display !== 'none';
+    if (!built) {
+      const table = document.createElement('table');
+      table.className = 'hist-table';
+      table.innerHTML = '<thead><tr><th>Điểm</th><th>Số thí sinh</th></tr></thead>';
+      const tbody = document.createElement('tbody');
+      labels.forEach((s, i) => {
+        if (counts[i] <= 0) return;
+        const tr = document.createElement('tr');
+        const td1 = document.createElement('td'); td1.textContent = s.toFixed(2);
+        const td2 = document.createElement('td'); td2.textContent = fmtInt(counts[i]);
+        tr.appendChild(td1); tr.appendChild(td2);
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      tableWrap.appendChild(table);
+      built = true;
+    }
+    tableWrap.style.display = isOpen ? 'none' : 'block';
+    tableToggle.textContent = isOpen ? 'Xem bảng số liệu ▾' : 'Ẩn bảng số liệu ▴';
+  });
+
+  return card;
+}
+
+(function initPhoDiem() {
+  const grid = document.getElementById('pd-grid');
+  HIST_CHARTS.forEach((cfg) => grid.appendChild(buildHistCard(cfg)));
+  document.getElementById('pd-total-rows').textContent = fmtInt(PHODIEM_2026.totalRows) + ' lượt thi';
+})();
+
+/* ================================================================
+   TRA CỨU XẾP HẠNG ĐIỂM (trong tab Phổ điểm 2026)
+   ================================================================ */
+(function initRankTool() {
+  const KHOI_INFO = {
+    a00: { label: 'A00 — Toán, Lý, Hóa', need: ['toan', 'ly', 'hoa'], subjLabel: { toan: 'Toán', ly: 'Lý', hoa: 'Hóa' } },
+    a01: { label: 'A01 — Toán, Lý, Anh', need: ['toan', 'ly', 'anh'], subjLabel: { toan: 'Toán', ly: 'Lý', anh: 'Anh' } },
+  };
+  const state = { khoi: 'a00', formula: 'raw' };
+
+  const khoiRow = document.getElementById('pd-rank-khoi');
+  const formulaRow = document.getElementById('pd-rank-formula');
+  const inputs = {
+    toan: document.getElementById('pd-rank-toan'),
+    ly: document.getElementById('pd-rank-ly'),
+    hoa: document.getElementById('pd-rank-hoa'),
+    anh: document.getElementById('pd-rank-anh'),
+  };
+  const fieldWraps = {
+    toan: document.getElementById('pd-rank-field-toan'),
+    ly: document.getElementById('pd-rank-field-ly'),
+    hoa: document.getElementById('pd-rank-field-hoa'),
+    anh: document.getElementById('pd-rank-field-anh'),
+  };
+  const resultBox = document.getElementById('pd-rank-result');
+  const emptyHint = document.getElementById('pd-rank-empty');
+
+  function highlightFields() {
+    const need = KHOI_INFO[state.khoi].need;
+    Object.keys(fieldWraps).forEach((k) => {
+      fieldWraps[k].style.opacity = need.includes(k) ? '1' : '.45';
+      fieldWraps[k].querySelector('input').style.borderColor = need.includes(k) ? 'var(--crimson)' : 'var(--line)';
+    });
+  }
+
+  khoiRow.querySelectorAll('.wiz-toggle').forEach((el) => {
+    el.addEventListener('click', () => {
+      khoiRow.querySelectorAll('.wiz-toggle').forEach((c) => c.classList.remove('selected'));
+      el.classList.add('selected');
+      state.khoi = el.dataset.khoi;
+      highlightFields();
+      recomputeRank();
+    });
+  });
+  formulaRow.querySelectorAll('.wiz-toggle').forEach((el) => {
+    el.addEventListener('click', () => {
+      formulaRow.querySelectorAll('.wiz-toggle').forEach((c) => c.classList.remove('selected'));
+      el.classList.add('selected');
+      state.formula = el.dataset.formula;
+      recomputeRank();
+    });
+  });
+  Object.values(inputs).forEach((el) => el.addEventListener('input', recomputeRank));
+
+  function recomputeRank() {
+    const info = KHOI_INFO[state.khoi];
+    const vals = {};
+    for (const k of info.need) {
+      const v = parseFloat(inputs[k].value);
+      if (isNaN(v)) { resultBox.style.display = 'none'; emptyHint.style.display = 'block'; return; }
+      vals[k] = Math.min(10, Math.max(0, v));
+    }
+    const toan = vals.toan, ly = vals.ly, third = state.khoi === 'a00' ? vals.hoa : vals.anh;
+    const thirdLabel = info.subjLabel[state.khoi === 'a00' ? 'hoa' : 'anh'];
+
+    let score, breakdown;
+    if (state.formula === 'raw') {
+      score = toan + ly + third;
+      breakdown = `Toán ${toan.toFixed(2)} + Lý ${ly.toFixed(2)} + ${thirdLabel} ${third.toFixed(2)} = ${score.toFixed(2)}`;
+    } else {
+      score = (toan * 2 + ly + third) * 0.75;
+      breakdown = `(Toán ${toan.toFixed(2)}×2 + Lý ${ly.toFixed(2)} + ${thirdLabel} ${third.toFixed(2)}) × 3/4 = ${score.toFixed(2)}`;
+    }
+    score = Math.min(30, Math.max(0, score));
+
+    const key = state.khoi + (state.formula === 'x2' ? 'x2' : '');
+    const counts = PHODIEM_2026.hist[key];
+    const labels = PHODIEM_2026.labels;
+    const stats = PHODIEM_2026.stats[key];
+    const bin = PHODIEM_2026.bin;
+    let idx = Math.round(score / bin);
+    idx = Math.min(labels.length - 1, Math.max(0, idx));
+
+    let higher = 0, equal = 0, lower = 0;
+    counts.forEach((c, i) => { if (i > idx) higher += c; else if (i < idx) lower += c; else equal += c; });
+    const total = stats.count;
+    const percentile = total > 0 ? (lower + equal / 2) / total * 100 : 0;
+    const topPct = 100 - percentile;
+
+    emptyHint.style.display = 'none';
+    resultBox.style.display = 'block';
+    document.getElementById('pd-rank-label').textContent = HIST_CHARTS.find((h) => h.key === key).title;
+    document.getElementById('pd-rank-score').textContent = score.toFixed(2);
+    document.getElementById('pd-rank-breakdown').textContent = breakdown;
+    document.getElementById('pd-rank-higher').textContent = `${fmtInt(higher)} (${(higher / total * 100).toFixed(2)}%)`;
+    document.getElementById('pd-rank-equal').textContent = `${fmtInt(equal)} (${(equal / total * 100).toFixed(2)}%)`;
+    document.getElementById('pd-rank-lower').textContent = `${fmtInt(lower)} (${(lower / total * 100).toFixed(2)}%)`;
+    document.getElementById('pd-rank-pct').innerHTML = '';
+    const pctEl = document.getElementById('pd-rank-pct');
+    const b1 = document.createElement('b'); b1.textContent = `Bạn vượt qua khoảng ${percentile.toFixed(1)}%`;
+    pctEl.appendChild(b1);
+    pctEl.appendChild(document.createTextNode(` thí sinh khối ${state.khoi.toUpperCase()} (${state.formula === 'x2' ? 'công thức Toán×2' : 'tổng điểm thường'}) — tương đương `));
+    const b2 = document.createElement('b'); b2.textContent = `top ${topPct.toFixed(1)}%`;
+    pctEl.appendChild(b2);
+    pctEl.appendChild(document.createTextNode(` trong tổng ${fmtInt(total)} thí sinh.`));
+  }
+
+  highlightFields();
+})();
+
+/* ================================================================
+   SO SÁNH DỮ LIỆU NĂM 2025 & 2026 (trong tab Phổ điểm)
+   2 bảng: tổng điểm thường / nhân hệ số 2 môn Toán — mỗi bảng vẽ cả
+   A00 và A01, chỉ hiện năm nào được bấm chọn ở nút 2025 / 2026.
+   ================================================================ */
+const CMP_YEAR_DATA = { 2025: PHODIEM_2025, 2026: PHODIEM_2026 };
+const CMP_CHARTS = [
+  {
+    key: 'raw',
+    title: 'Bảng 1 — Tổng điểm thường (không nhân hệ số Toán)',
+    formula: 'A00 = Toán + Lý + Hóa  ·  A01 = Toán + Lý + Tiếng Anh',
+    groups: [
+      { dataKey: 'a00', label: 'A00', color: '#b52d72' },
+      { dataKey: 'a01', label: 'A01', color: '#6b1c46' },
+    ],
+  },
+  {
+    key: 'x2',
+    title: 'Bảng 2 — Nhân hệ số 2 môn Toán (×3/4, thang 30)',
+    formula: 'Điểm = (Toán×2 + Môn2 + Môn3) × 3/4',
+    groups: [
+      { dataKey: 'a00x2', label: 'A00', color: '#e8579a' },
+      { dataKey: 'a01x2', label: 'A01', color: '#8f2a5e' },
+    ],
+  },
+];
+
+function cmpSmooth(counts, bin) {
+  const SIGMA_POINTS = 0.1;
+  const sigmaBins = SIGMA_POINTS / bin;
+  const kernelRadius = Math.max(1, Math.ceil(sigmaBins * 3));
+  const kernel = [];
+  for (let k = -kernelRadius; k <= kernelRadius; k++) kernel.push(Math.exp(-(k * k) / (2 * sigmaBins * sigmaBins)));
+  return counts.map((_, i) => {
+    let sum = 0, wsum = 0;
+    for (let k = -kernelRadius; k <= kernelRadius; k++) {
+      const j = i + k;
+      if (j >= 0 && j < counts.length) { const w = kernel[k + kernelRadius]; sum += counts[j] * w; wsum += w; }
+    }
+    return sum / wsum;
+  });
+}
+
+function buildCmpCard(cfg, years) {
+  const series = [];
+  years.forEach((year) => {
+    const data = CMP_YEAR_DATA[year];
+    cfg.groups.forEach((g) => {
+      series.push({
+        label: `${g.label} · ${year}`,
+        khoiLabel: g.label,
+        year,
+        color: g.color,
+        dashed: year === 2026,
+        counts: data.hist[g.dataKey],
+        labels: data.labels,
+        bin: data.bin,
+        stats: data.stats[g.dataKey],
+        totalRows: data.totalRows,
+      });
+    });
+  });
+
+  const legendHTML = series.map((s) => `<div class="cmp-legend-item${s.dashed ? ' dashed' : ''}"><span class="cmp-legend-swatch" style="border-top-color:${s.color};"></span>${s.label}</div>`).join('');
+  const tableRows = series.map((s) => `<tr>
+      <td class="cmp-khoi">${s.khoiLabel}</td>
+      <td>${s.year}</td>
+      <td>${fmtInt(s.stats.count)}</td>
+      <td>${(s.stats.count / s.totalRows * 100).toFixed(1)}%</td>
+      <td>${s.stats.mean.toFixed(2)}</td>
+      <td>${s.stats.max.toFixed(2)}</td>
+    </tr>`).join('');
+
+  const card = document.createElement('div');
+  card.className = 'hist-card';
+  card.innerHTML = `
+    <div class="hist-card-title">${cfg.title}</div>
+    <div class="hist-card-formula mono">${cfg.formula}</div>
+    <div class="cmp-legend">${legendHTML}</div>
+    <div class="hist-chart-wrap">
+      <svg class="hist-svg" viewBox="0 0 640 260" preserveAspectRatio="none"></svg>
+      <div class="hist-tooltip cmp-tooltip"></div>
+    </div>
+    <table class="cmp-table">
+      <thead><tr><th>Khối</th><th>Năm</th><th>Thí sinh</th><th>% tổng lượt thi</th><th>Điểm TB</th><th>Cao nhất</th></tr></thead>
+      <tbody>${tableRows}</tbody>
+    </table>
+  `;
+
+  const svg = card.querySelector('.hist-svg');
+  const tooltip = card.querySelector('.hist-tooltip');
+  const wrap = card.querySelector('.hist-chart-wrap');
+
+  const VBW = 640, VBH = 260, PAD_L = 36, PAD_R = 10, PAD_T = 16, PAD_B = 26;
+  const innerW = VBW - PAD_L - PAD_R;
+  const innerH = VBH - PAD_T - PAD_B;
+  const baseY = PAD_T + innerH;
+  const xForScore = (s) => PAD_L + (s / 30) * innerW;
+  const maxCount = Math.max(1, ...series.map((s) => Math.max(...s.counts)));
+  const yForCount = (c) => PAD_T + innerH - (c / maxCount) * innerH;
+
+  const NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; }
+
+  for (let s = 0; s <= 30; s += 5) {
+    const x = xForScore(s);
+    svg.appendChild(el('line', { class: 'grid-line', x1: x, x2: x, y1: PAD_T, y2: baseY }));
+    const t = el('text', { class: 'axis-text', x, y: VBH - 8, 'text-anchor': s === 0 ? 'start' : (s === 30 ? 'end' : 'middle') });
+    t.textContent = s;
+    svg.appendChild(t);
+  }
+  [0, Math.round(maxCount / 2), maxCount].forEach((v) => {
+    const y = yForCount(v);
+    svg.appendChild(el('line', { class: 'grid-line', x1: PAD_L, x2: PAD_L + innerW, y1: y, y2: y }));
+    const t = el('text', { class: 'axis-text', x: PAD_L - 6, y: y + 3, 'text-anchor': 'end' });
+    t.textContent = fmtInt(v);
+    svg.appendChild(t);
+  });
+
+  const smoothedSeries = series.map((s) => cmpSmooth(s.counts, s.bin));
+  series.forEach((s, si) => {
+    const pts = s.labels.map((sc, i) => `${xForScore(sc)},${yForCount(smoothedSeries[si][i])}`);
+    const line = el('polyline', { points: pts.join(' '), fill: 'none', stroke: s.color, 'stroke-width': 2.2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' });
+    if (s.dashed) line.setAttribute('stroke-dasharray', '6,4');
+    svg.appendChild(line);
+  });
+
+  const crosshair = el('line', { class: 'crosshair', x1: 0, x2: 0, y1: PAD_T, y2: baseY });
+  svg.appendChild(crosshair);
+  const dots = series.map((s) => {
+    const d = el('circle', { class: 'hover-dot', r: 4, fill: s.color, stroke: '#fff', 'stroke-width': 2 });
+    svg.appendChild(d);
+    return d;
+  });
+  const hitRect = el('rect', { x: PAD_L, y: PAD_T, width: innerW, height: innerH, fill: 'transparent' });
+  svg.appendChild(hitRect);
+
+  function showAt(clientX) {
+    const rect = svg.getBoundingClientRect();
+    const wrapRect = wrap.getBoundingClientRect();
+    const fracX = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+    const userX = fracX * VBW;
+    const score = Math.min(30, Math.max(0, ((userX - PAD_L) / innerW) * 30));
+    const sx = xForScore(score);
+    crosshair.setAttribute('x1', sx); crosshair.setAttribute('x2', sx);
+    crosshair.style.opacity = 1;
+    let minSy = baseY;
+    const lines = series.map((s, si) => {
+      let idx = Math.round(score / s.bin);
+      idx = Math.min(s.labels.length - 1, Math.max(0, idx));
+      const sy = yForCount(smoothedSeries[si][idx]);
+      dots[si].setAttribute('cx', sx); dots[si].setAttribute('cy', sy);
+      dots[si].style.opacity = 1;
+      if (sy < minSy) minSy = sy;
+      return `<div class="cmp-tt-row"><span class="cmp-tt-dot" style="background:${s.color};"></span><span>${s.label}</span><b>${fmtInt(s.counts[idx])}</b></div>`;
+    });
+    const leftPx = (sx / VBW) * wrapRect.width;
+    const topPx = (minSy / VBH) * wrapRect.height;
+    tooltip.style.left = leftPx + 'px';
+    tooltip.style.top = Math.max(0, topPx - 10) + 'px';
+    tooltip.innerHTML = `<div class="cmp-tt-score">${score.toFixed(2)} điểm</div>` + lines.join('');
+    tooltip.style.opacity = 1;
+  }
+  function hide() { crosshair.style.opacity = 0; dots.forEach((d) => d.style.opacity = 0); tooltip.style.opacity = 0; }
+
+  hitRect.addEventListener('pointermove', (e) => showAt(e.clientX));
+  hitRect.addEventListener('pointerleave', hide);
+  hitRect.addEventListener('touchstart', (e) => { if (e.touches[0]) showAt(e.touches[0].clientX); }, { passive: true });
+  hitRect.addEventListener('touchmove', (e) => { if (e.touches[0]) showAt(e.touches[0].clientX); }, { passive: true });
+
+  return card;
+}
+
+(function initCmpTool() {
+  const toggleRow = document.getElementById('cmp-year-toggle');
+  const emptyHint = document.getElementById('cmp-empty-hint');
+  const grid = document.getElementById('cmp-grid');
+  const activeYears = new Set();
+
+  function render() {
+    if (activeYears.size === 0) {
+      grid.style.display = 'none';
+      grid.innerHTML = '';
+      emptyHint.style.display = 'block';
+      return;
+    }
+    emptyHint.style.display = 'none';
+    grid.style.display = 'flex';
+    grid.innerHTML = '';
+    const years = [...activeYears].sort();
+    CMP_CHARTS.forEach((cfg) => grid.appendChild(buildCmpCard(cfg, years)));
+  }
+
+  toggleRow.querySelectorAll('.wiz-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const year = parseInt(btn.dataset.year, 10);
+      if (activeYears.has(year)) { activeYears.delete(year); btn.classList.remove('selected'); }
+      else { activeYears.add(year); btn.classList.add('selected'); }
+      render();
+    });
+  });
+})();
 
 /* ================================================================
    INITIALIZE WIZARDS
